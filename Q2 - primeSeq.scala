@@ -5,7 +5,7 @@ object PrimeNumbers{
     var n : Int = 10;
     var a : Int = 1;
     while( a < n ){
-        if (prime(a)){
+        if (primeSeq(a)){
           println(a);
       }
          a = a + 1;
@@ -13,7 +13,7 @@ object PrimeNumbers{
       
   } 
 
-  def prime(n:Int, i:Int = 2) : Boolean = 
+  def primeSeq(n:Int, i:Int = 2) : Boolean = 
   { 
       // Base cases 
       if (n <= 2) {
@@ -29,7 +29,7 @@ object PrimeNumbers{
           return true
 
       // Check for next divisor 
-      return prime(n, i + 1); 
+      return primeSeq(n, i + 1); 
   } 
   
 }
